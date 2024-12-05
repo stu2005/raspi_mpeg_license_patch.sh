@@ -34,9 +34,9 @@
 HS=1D #> 0x1d
 
 function _get_startelf() {
-        if [[ -f /boot/start.elf && "$2" == "--os=raspbian" ]]; then
+        if [[ -f /boot/firmware/start.elf && "$2" == "--os=raspbian" ]]; then
                 # On Raspbian:
-                START_ELF=/boot/start.elf
+                START_ELF=/boot/firmware/start.elf
         elif [[ -f /flash/start.elf && "$2" == "--os=libreelec" ]]; then
                 # On libreElec:
                 START_ELF=/flash/start.elf
